@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
     const navigate = useNavigate();                                                  // Logic to navigate to the success page after checkout
-    const [activeCart, setActiveCart] = useState(true);
+    const [activeCart, setActiveCart] = useState(false);
     const cartItems = useSelector((state) => state.cart.cart);
     const totalQty = cartItems.reduce((totalQty, item) => totalQty + item.qty, 0);      // Logic to calculate the total quantity of items in the cart
     const totalPrice = cartItems.reduce(
